@@ -2,11 +2,13 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import routes from './routes/route.js'; // rotas externas
+import AlunoRoutes from './routes/AlunoRoutes.js'
+
 
 
 const app = express();
-
 app.use(express.urlencoded({ extended: true }));
+app.use(AlunoRoutes)
 app.set('view engine', 'ejs');
 
 // Caminho correto das views e public

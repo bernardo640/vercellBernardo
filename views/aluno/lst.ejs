@@ -1,0 +1,22 @@
+<%-include('cabecalho.ejs')%>
+    <h1>aluno</h1>
+    <table>
+        <tr>
+            <td>nome</td>
+            <td>matricula</td>
+            <td>açoes</td>
+        </tr>
+       
+            <%for (const (nome, matricula) of Aluno) {%>
+            <tr>
+                <td><%=nome%></td>
+                <td><%=matricula%></td>
+            </tr>
+            <%}%>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+ <%-include('rodape.ejs')%>
