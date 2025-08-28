@@ -3,12 +3,14 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import routes from './routes/route.js'; // rotas externas
 import AlunoRoutes from './routes/AlunoRoutes.js'
+import CursoRoutes from './routes/CursoRoutes.js'
 
 
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(AlunoRoutes)
+app.use(CursoRoutes)
 app.set('view engine', 'ejs');
 
 // Caminho correto das views e public

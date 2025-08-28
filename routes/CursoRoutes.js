@@ -1,10 +1,10 @@
 import express from 'express'
 const router = express.Router()
 
-import AlunoController from '../controllers/AlunoController.js'
-const controller = new AlunoController()
+import CorsoController from '../controllers/CursoControler.js'
+const controller = new CorsoController()
 
-const caminhoBase = 'aluno/'
+const caminhoBase = 'curso/'
 
 router.get('/' + caminhoBase + 'add', controller.openADD)
 router.post('/' + caminhoBase + 'add', controller.add)

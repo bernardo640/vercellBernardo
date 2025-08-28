@@ -1,5 +1,6 @@
-<%-include('cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%>
     <h1>aluno</h1>
+    <a href="/aluno/add">+ Aluno</a> 
     <table>
         <tr>
             <td>nome</td>
@@ -7,7 +8,7 @@
             <td>açoes</td>
         </tr>
        
-            <%for (const (nome, matricula) of Aluno) {%>
+            <%for (const {nome, matricula} of Aluno) {%>
             <tr>
                 <td><%=nome%></td>
                 <td><%=matricula%></td>
@@ -19,4 +20,4 @@
             <td></td>
         </tr>
     </table>
- <%-include('rodape.ejs')%>
+ <%-include('../rodape.ejs')%>

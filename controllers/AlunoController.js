@@ -9,13 +9,13 @@ this.openADD = async(req, res)=> {
     res.render(caminhoBase + "add")
 }
 this.add = async(req, res)=>{
-    await Aluno.creater({
+    await Aluno.create({
         nome: req.body.nome,
-        matricula:req.bod.matricula
+        matricula:req.body.matricula
     })
     res.redirect('/'+caminhoBase + 'add')
 }
-this.lisy = async(req, res)=>{
+this.list= async(req, res)=>{
     const resultado = await Aluno.find({})
     res.render(caminhoBase + 'lst', {Aluno:resultado})
 }
